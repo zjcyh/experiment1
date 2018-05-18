@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="scriptaculous/lib/prototype.js" type="text/javascript"></script>
+<script src="scriptaculous/src/effects.js" type="text/javascript"></script>
+<script type="text/javascript" src="css/validation.js"></script>
+<script type="text/javascript">
+function setActiveStyleSheet(title) {
+var i, a, main;
+for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
+if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+a.disabled = true;
+if(a.getAttribute("title") == title) a.disabled = false;}}}
+</script>
+<link title="style1" rel="stylesheet" href="css/style.css" type="text/css" />
+<link title="style2" rel="alternate stylesheet" href="css/style2.css" type="text/css" />
+<link title="style3" rel="alternate stylesheet" href="css/style3.css" type="text/css" />
+<title>报名</title>
+</head>
+
+<body>
+    <div class="style_changer">
+    	<div class="style_changer_text">Themes:</div>
+        <input type="submit" value="1" onclick="setActiveStyleSheet('style1');" />
+        <input type="submit" value="2" onclick="setActiveStyleSheet('style2');" />
+        <input type="submit" value="3" onclick="setActiveStyleSheet('style3');" />
+    </div>
+
+	<div class="form_content">
+    <form id="test" action="#" method="get">
+    <fieldset>
+        <legend>个人信息</legend><div class="form-row">
+            <div class="field-label">姓名：</div>
+            <div class="field-widget"><input name="field1" id="field1" class="required" title="Enter your name" /></div>
+        </div>
+        
+        <div class="form-row">
+            <div class="field-label">学号：:</div>
+            <div class="field-widget"><input name="field2" id="field2" class="required" title="Enter your name" /></div>
+        </div>
+        
+        <div class="form-row">
+            <div class="field-label">短介绍：:</div>
+            <div class="field-widget"><textarea class="required"></textarea></div>
+        </div>
+        
+        
+    </fieldset>
+    <fieldset>
+        <legend>其他细节</legend>
+        
+        <div class="form-row">
+            <div class="field-label">
+          <label for="field4">学院、班级</label>:</div>
+            <div class="field-widget"><input name="field4" id="field4" class="required" title="Enter your name" /></div>
+        </div>
+        
+        <div class="form-row">
+            <div class="field-label">邮箱：</div>
+            <div class="field-widget"><input name="field5" id="field5" class="required validate-email" title="Enter your name" /></div>
+        </div>
+        <div class="form-row">
+          <div class="field-label">密码：</div>
+            <div class="field-widget"><input type="password" name="field7" id="field7" class="required validate-password" title="Enter a password greater than 6 characters" /></div>
+        </div>
+          
+        <div class="form-row">
+            <div class="field-label">确认密码：</div>
+            <div class="field-widget"><input type="password" name="field8" id="field8" class="required validate-password-confirm" title="Enter the same password for confirmation" /></div>
+        </div> 
+      
+      
+    </fieldset>  
+    <fieldset>
+        <legend class="optional">活动信息</legend>
+        <div class="form-row">
+          <div class="field-label">联系电话：</div>
+            <div class="field-label"><input name="field10" id="field10" class="optional" title="Optional: Enter your age" /></div>
+        </div>
+        <div class="form-row-select">
+
+            <fieldset>
+                <legend class="optional">选择活动</legend>
+                <label>
+                <input type="radio" class="radio_input" name="field11" id="field11-male" value="2" />活动一<br />
+                <input type="radio" class="radio_input" name="field11" id="field11-female" value="2"/>活动二<br />
+                <input type="radio" class="radio_input" name="field11" id="field11-female" value="2"/>活动三<br />
+                <input type="radio" class="radio_input" name="field11" id="field11-female" value="2"/>活动四<br />    
+                <input type="radio" class="radio_input" name="field11" id="field11-female" value="2"/>活动五<br />
+                </label>
+            </fieldset> 
+        </div>
+        <div class="form-row">
+            <div class="field-label"><label for="field12">补充</label>:</div>
+            <div class="field-widget"><textarea class="optional"></textarea></div>
+        </div>
+        
+    </fieldset>
+    <input type="submit" class="submit" value="Submit" /> 
+    <input class="reset" type="button" value="Reset" onclick="valid.reset(); return false" />
+    </form>
+    </div>
+    <script type="text/javascript">
+        function formCallback(result, form) {
+            window.status = "valiation callback for form '" + form.id + "': result = " + result;
+        }
+        
+        var valid = new Validation('test', {immediate : true, onFormValidate : formCallback});
+        Validation.addAllThese([
+            ['validate-password', '> 6 characters', {
+                minLength : 7,
+                notOneOf : ['password','PASSWORD','1234567','0123456'],
+                notEqualToField : 'field1'
+            }],
+            ['validate-password-confirm', 'please try again.', {
+                equalToField : 'field8'
+            }]
+        ]);
+    </script>
+</body>
+</html>

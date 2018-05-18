@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>访客</title>
+	<link href="css/02.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+</head>
+
+<body>
+<div class="banner">
+	<div class="header">
+		<div class="container">
+			<div class="header-logo" style="font-size:42px; color:#09F;"><em><strong>学生访客</strong></em></div>
+			<div class="top-nav">		
+				<ul class="nav1">
+					<li><a href="学生访客.html" class="active scroll">HOME</a></li>
+					<li><a href="#study" class="scroll">学习心得交流</a></li>
+					<li><a href="#activity" class="scroll">浏览报名活动</a></li>
+					<li><a href="#contact" class="scroll">联系我们</a></li>
+                    <li><select name="快速链接" id="快速链接" onchange="window.location=this.value;" style=" opacity:0.6;">
+	        <option selected value="访客.html">快速链接</option>
+	        <option value="优生登.html">优秀学生</option>
+	        <option value="社团登.html">社团管理人员</option>
+            <option value="https://aao.neu.edu.cn/">东北大学教务处</option>
+            <option value="http://www.neu.edu.cn/">东北大学</option>
+          </select></li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+		<div class="container">
+			<div class="banner-title"> 
+				<h5>&nbsp;</h5>
+			  <h5>~~欢迎~~</h5>
+			  <p>&nbsp; </p>
+			  <h1><span>在这里你可以学习交流和报名各种活动</span></h1>
+			</div>
+		</div>
+	</div>
+<div id="study" style="background-image:url(images/04.jpg);background-attachment:fixed;">
+    <div class="col-md-6 about-bottom-left" style=" width:940px; display:inline;">
+	  <p style=" font-size:32px;"><strong>学习心得交流</strong></p>
+	  <p>&nbsp;</p>
+			<p>今天给大家介绍的是解决优化问题中的一种常用算法——遗传算法</p>
+			<p><strong>遗传算法基本概念</strong></p>
+			<p>遗传算法(Genetic Algorithms, GA)是一类借鉴生物界自然选择和自然遗传机制的随机化搜索算法。</p>
+			<p>遗传算法也是计算机科学人工智能领域中用于解决最优化的一种搜索启发式算法，是进化算法的一种。这种启发式通常用来生成有用的解决方案来优化和搜索问题。进化算法最初是借鉴了进化生物学中的一些现象而发展起来的，这些现象包括遗传、突变、自然选择以及杂交等。遗传算法在适应度函数选择不当的情况下有可能收敛于局部最优，而不能达到全局最优。</p>
+			<p>它模拟自然选择和自然遗传过程中发生的繁殖、交叉和基因突变现象，在每次迭代中都保留一组候选解，并按某种指标从解群中选取较优的个体，利用遗传算子(选择、交叉和变异)对这些个体进行组合，产生新一代的候选解群，重复此过程，直到满足某种收敛指标为止。</p>
+			<p><strong>GA</strong><strong>的组成:</strong></p>
+			<p>（1）编码（产生初始种群）</p>
+			<p>（2）适应度函数</p>
+	  		<p>（3）遗传算子（选择、交叉、变异）</p>
+			<p>（4）运行参数</p>
+			<div class="read-more">
+				<a href="#">READ MORE<span></span></a>
+			</div>
+            </div>
+  <div style="display:inline;">
+  <h4>我要提问</h4>
+            <form>
+				<p>
+				  <label for="select"></label>
+				  <select name="select" id="select" style="width:260px; opacity:0.6;">
+	        <option selected>提问或是留言</option>
+	        <option >我要提问</option>
+	        <option >我要留言</option>
+			      </select>
+				</p>
+				<p>
+				  <textarea type="text" style=" opacity:0.7; width:600px; height:400px; font-size:22px;"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>请添加内容...</textarea>
+			  </p>
+				<p>
+				  <input style="width:120px; height:30px; font-size:22px;" type="submit" onclick="alert1()" value="提交" >
+			  </p>
+              <script language="javascript">
+			  function alert1(){
+				  alert("谢谢您，提交成功！");
+				  }
+                  </script>
+			</form>
+        </div>
+</div>
+<div id="activity" style="background-image:url(images/hd.jpg);background-attachment:fixed;">
+<div>
+<p style=" font-size:32px;"><strong>浏览报名活动</strong></p>
+	  <p>&nbsp;</p>
+</div>
+<div class="blog-grids">
+				<div class="blog-grids-left">
+					<div  id="top" class="callbacks_container">
+						<ul class="rslides" id="slider4">
+							<li>
+								<img src="images/hd1.jpg" alt=""/>
+							</li>
+						</ul>
+					</div>		
+				</div>
+				<div class="blog-grids-right">
+					<span>10 April 2017</span>
+					<h4>&ldquo;阿克苏诺贝尔中国大学生社会公益奖&rdquo;是在共青团中央的指导下，由阿克苏诺贝尔（中国）于2011年支持设立的中国第一个以大学生社团为奖励对象的社会公益奖项，旨在鼓励在社会公益领域有突出贡献的学生组织，促进大学生积极参与社会公益活动，并在社会中普及公益理念，提升大众对社会公益的关注度及参与度。</h4>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="caption-imag">
+					<div class="round-shape">
+						<p>a</p>
+					</div>
+				</div>
+			</div>
+            <div class="blog-grids">
+				<div class="blog-grids-left lt-text">
+					<span>25 October 2017</span>
+					<h4>曙光行动-沈阳市盲校</h4>
+				  <h4>2017年10月25日，本学期&ldquo;太阳鸟计划&rdquo;之曙光行动-沈阳市盲校活动开展了第五次活动。在此次活动中，志愿者们深深感受到了来自盲校孩子不一样的活泼和热情，散播爱心的同时收获亦是巨大。</h4>
+					<h4>孩子们是不幸的，不幸的生活在黑暗之中，却又是幸运的，幸运的一个个都是可爱的小天使。让这些可爱的小天使健康快乐的成长吧！</h4>
+					<h4>&nbsp;</h4>
+				</div>
+				<div class="blog-grids-right rt-img">
+					<a href="#"><img src="images/hd2.jpg" alt=""/></a>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="caption-imag">
+					<div class="round-shape">
+						<p>a</p>
+					</div>
+				</div>
+			</div>
+            <div class="blog-grids">
+				<div class="blog-grids-left">
+					<a href="#"><img src="images/hd3.jpg" alt=""/></a>
+				</div>
+				<div class="blog-grids-right">
+					<span>02 November 2017</span>
+					<h4>结合盛京医院实际情况与患者需求，东北大学将主要从以下方面开展志愿服务工作：</h4>
+					<h4>★</h4>
+					<h4>(一)<strong>便民服务</strong>——在门诊大厅、急诊大厅、输液室等地点提供纸巾、纸杯等便民用品，以及问路、乘车、附近吃住等资讯信息。</h4>
+					<h4>(二)<strong>指导协助服务</strong>——协助门、急诊患者打印检验结果，协助患者家属推车、推床；指导患者办理预约、挂号、分诊等手续，指导患者如何使用查询机，如何申请志愿服务，如何雇佣陪护，如何租赁陪护床。</h4>
+					<h4>(三)<strong>陪伴服务</strong>——门诊患者就诊陪伴、病房患者检查陪伴、病房患者交谈服务、棋牌对弈，特殊检查陪伴服务（如血液透析）。</h4>
+					<h4>总之</h4>
+					<h4>哪里有需要</h4>
+					<h4>哪里就有志愿者勤劳的身影！</h4>
+					<h4>&nbsp;</h4>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="caption-imag">
+					<div class="round-shape">
+						<p>a</p>
+					</div>
+				</div>
+                <p align="center">
+			<button type="submit" onClick="window.open('报名.html','_self')" style="width:260px;"><strong>我要报名</strong></button><br>
+            </p>
+			</div>
+            
+<div class="contact">
+		<div class="container" id="contact">
+			<h3>CONTACT</h3>
+			<form>
+				<input type="text" value="姓名*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name*';}" required>
+				<input type="email" value="邮箱*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email*';}" required>
+				<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>在这里输入您的建议与意见...</textarea>
+				<p align="center">
+				  <input type="submit" onclick="alert1()" value="提交" >
+			  </p>
+              <script language="javascript">
+			  function alert1(){
+				  alert("谢谢您，提交成功！");
+				  }
+                  </script>
+		  </form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+		$(document).ready(function() {
+			$().UItoTop({ easingType: 'easeOutQuart' });	
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
+</html>

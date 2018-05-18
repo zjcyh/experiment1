@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加活动</title>
+</head>
+
+<body style="background-image:url(images/timg.jpg); background-attachment:fixed">
+<div class="container" id="contact">
+			<h3 align="center" style="font-size:60px;">添加活动</h3>
+			<form>
+				<p align="center">
+				  <input type="text" style=" opacity:0.5; width:340px; height:36px; font-size:22px;" value="标题*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '标题*';}" required>
+				  <input type="text" style=" opacity:0.5; width:240px; height:36px; font-size:22px;" value="日期*" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '日期*';}" required>
+			  </p>
+				<p align="center">
+				  <textarea type="text" style=" opacity:0.7; width:750px; height:600px; font-size:22px;"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required>请添加活动介绍...</textarea>
+			  </p>
+              <p align="center">添加图片
+                <input type="file" name="file" id="filePicker"/>
+              <div id = "div1">
+                  </div>
+              </p>
+				<p align="center">
+				  <input style="width:120px; height:30px; font-size:22px;" type="submit" onclick="alert1()" value="提交" >
+			  </p>
+              <script language="javascript">
+			  function alert1(){
+				  alert("谢谢您，提交成功！");
+				  }
+                  </script>
+			</form>
+		</div>
+</body>
+</html>
